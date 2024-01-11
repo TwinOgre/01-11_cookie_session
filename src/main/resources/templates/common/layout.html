@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TitleTitle</title>
+    <!--  bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <header class="mt-2">
+        <a th:href="@{/}" class="btn btn-info ms-3">홈</a>
+        <a  th:href="@{/member/login}" class="btn btn-dark ms-3">login</a>
+        <a  th:href="@{/member/logout}" class="btn btn-secondary ms-3">logout</a>
+<!--   th:if="${@request.logout}"   th:if="${@request.login}"   -->
+<!--        <a th:if="${@request.admin}"  href="#" >"🎉 관리자님 환영합니다. 🎉"</a>-->
+<!--        <a th:if="${@request.admin}"  href="#" >"🎉 일반회원님 환영합니다. 🎉"</a>-->
+<!--        <span th:if="${@request.isAdmin()}" th:text="🎉 일반회원님 환영합니다. 🎉"></span>-->
+    </header>
+</div>
+<th:block layout:fragment="content"></th:block>
+</body>
+</html>
